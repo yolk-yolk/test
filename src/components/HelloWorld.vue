@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
-    <hello msg = "父传子"></hello>
-    <h1>{{ msg }}</h1>
+    <hello name = "张三22222" :age = "19" sex="男"></hello>
+    <h1 @click="showName">{{ msg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -33,6 +33,7 @@
 
 <script>
 import hello from './hello.vue'
+import {showTips} from '../mixin'
 export default {
   name: 'HelloWorld',
   components:{
@@ -41,7 +42,10 @@ export default {
   props: {
     msg: String
   },
-  
+  methods:{
+        
+      },
+  mixins:[showTips]
 }
 </script>
 
